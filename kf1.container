@@ -1,0 +1,24 @@
+[Unit]
+Description=KF1 Server
+After=network-online.target
+
+[Container]
+Image=localhost/kf1
+ContainerName=kf1
+Volume=your-path:/server
+PublishPort=7707:7707/udp
+PublishPort=7708:7708/udp
+PublishPort=7717:7717/udp
+PublishPort=20560:20560/udp
+PublishPort=28852:28852/tcp
+PublishPort=28852:28852/udp
+StopTimeout=5
+EnvironmentFile=/home/podman-kf1/.env
+PodmanArgs=--log-level=debug
+
+[Service]
+Restart=always
+TimeoutStopSec=10
+
+[Install]
+WantedBy=default.target
