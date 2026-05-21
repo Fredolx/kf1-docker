@@ -3,7 +3,7 @@ Description=KF1 Server
 After=network-online.target
 
 [Container]
-Image=localhost/kf1
+Image=ghcr.io/fredolx/kf1-docker:latest
 ContainerName=kf1
 Volume=your-path:/server
 PublishPort=7707:7707/udp
