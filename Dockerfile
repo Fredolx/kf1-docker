@@ -24,4 +24,11 @@ RUN wineboot --init
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
 
+EXPOSE 7707/udp
+EXPOSE 7708/udp
+EXPOSE 7717/udp
+EXPOSE 20560/udp
+EXPOSE 28852/tcp
+EXPOSE 28852/udp
+
 ENTRYPOINT ["/entrypoint.sh"]
