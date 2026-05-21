@@ -12,6 +12,7 @@ PublishPort=7717:7717/udp
 PublishPort=20560:20560/udp
 PublishPort=28852:28852/tcp
 PublishPort=28852:28852/udp
+PublishPort=127.0.0.1:8075:8075/tcp
 StopTimeout=5
 EnvironmentFile=/home/podman-kf1/.env
 PodmanArgs=--log-level=debug
